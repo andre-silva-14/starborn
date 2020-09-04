@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'master.css' %}">
-    <title>StarBorn</title>
+    <title>Star Born</title>
 </head>
 <body>
-
+    {% block body %}
+    {% endblock %}
     <canvas id="canvas"></canvas>
     <script type="text/javascript" src="{% static 'scripts/dist/stars.js' %}">
     </script>
