@@ -360,8 +360,8 @@ function animateExplosion() {
 function giveBirth(event: MouseEvent, quantity: number) {
     const index = stars.length;
     stars.push(new Star(index));
-    stars[index].x = event.offsetX;
-    stars[index].y = event.offsetY;
+    stars[index].x = event.pageX;
+    stars[index].y = event.pageY;
 
     if (quantity > 1) giveBirth(event, quantity - 1);
 };
