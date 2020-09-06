@@ -1,0 +1,13 @@
+.link-btn {
+    text-decoration: none;
+}
+
+.login-btn {
+    @extend .link-btn;
+    font-size: 15px;
+}
+
+.signup-btn {
+    @extend .link-btn;
+    font-size: 19px;
+}
