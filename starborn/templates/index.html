@@ -2,17 +2,19 @@
 {% load static %}
 
 {% block body %}
-    <header>
-        <nav>
-            <a class="logo" href="/">
-                <img src="{% static 'logo.png' %}" alt="Logo">
-            </a>
-            <a href="#" class="login-btn">Login</a>
-        </nav>
-    </header>
     <div class="container">
-        <h2>Welcome to Star Born!</h2>
-        <h1>Be The One in One Milion.</h1>
-        <a href="#" class="signup-btn">Sign Up Now</a>
+        <header>
+            <nav>
+                <a class="logo" href="/">
+                    <img src="{% static 'logo.png' %}" alt="Logo">
+                </a>
+                <a href="#" class="login-btn">Login</a>
+            </nav>
+        </header>
+        <div class="inner-content">
+            <h2 class="smaller-heading">Welcome to Star Born!</h2>
+            <h1 class="bigger-heading">Be The One in <br>One Milion.</h1>
+            <a href="#" class="signup-btn">Sign Up Now</a>
+        </div>
     </div>
 {% endblock %}

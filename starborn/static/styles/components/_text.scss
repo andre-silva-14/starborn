@@ -1,0 +1,13 @@
+.headings{
+    font-weight: 300;
+}
+
+.smaller-heading{
+    @extend .headings;
+    font-size: 18px;
+}
+
+.bigger-heading{
+    @extend .headings;
+    font-size: 32px;
+}

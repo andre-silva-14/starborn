@@ -2,4 +2,4 @@ env
 __pycache__
 dist/
 *.sqlite3
-*.css
+*.css*

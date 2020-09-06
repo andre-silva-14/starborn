@@ -1,6 +1,7 @@
 $black: #080808;
 $lightGreen: #2fccab;
 $oceanBlue: #07868e; 
+$lightShadow: rgba(51, 69, 66, 0.25);
 
 *{
     margin: 0;
@@ -17,4 +18,28 @@ $oceanBlue: #07868e;
     z-index: -1;
 }
 
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: inline-block;
+    text-decoration: none;
+    
+    img{
+        height: 95px;
+    }
+}
+
+.container {
+    margin: 0 0 0 9%;
+}
+
+.inner-content{
+    margin: 0 0 0 3%;
+}
+
 @import "./components/buttons";
+@import "./components/text";

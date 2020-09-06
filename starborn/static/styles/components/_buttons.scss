@@ -1,13 +1,24 @@
 .link-btn {
+    display: inline-block;
     text-decoration: none;
+    color: $black;
+    font-weight: 300;
+    border-radius: 12px;
+    background: linear-gradient(261.9deg, $lightGreen 12.12%, $oceanBlue 98.9%);
+    box-shadow: 0px 0px 10px 5px
+                $lightShadow, 
+                0px 0px 10px 8px 
+                $lightShadow;
 }
 
 .login-btn {
     @extend .link-btn;
+    padding: 9px 33px;
     font-size: 15px;
 }
 
 .signup-btn {
     @extend .link-btn;
-    font-size: 19px;
+    padding: 27px 32px;
+    font-size: 27px;
 }
