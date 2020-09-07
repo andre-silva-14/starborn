@@ -1,6 +1,7 @@
 .link-btn {
     display: inline-block;
     text-decoration: none;
+    user-select: none;
     color: $black;
     font-weight: 300;
     border-radius: 12px;

@@ -27,6 +27,7 @@ nav{
 .logo{
     display: inline-block;
     text-decoration: none;
+    user-select: none;
     
     img{
         height: 115px;
@@ -34,7 +35,7 @@ nav{
 }
 
 .container {
-    margin: 3% 12%;
+    margin: 3.5vh 12%;
 }
 
 .inner-content{

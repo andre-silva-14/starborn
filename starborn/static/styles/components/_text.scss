@@ -1,14 +1,19 @@
+@mixin responsiveSize($responsive, $min, $max, $ratio) {
+    font-size: clamp($min, ($responsive * $ratio), $max);
+}
+
 .headings{
     font-weight: 300;
+    user-select: none;
 }
 
 .smaller-heading{
     @extend .headings;
-    font-size: 18px;
+    @include responsiveSize(5vw, 16px, 40px, 0.88);
 }
 
 .bigger-heading{
     @extend .headings;
-    font-size: 32px;
+    @include responsiveSize(9vw, 28px, 70px, 0.88);
     margin-top: 2vh;
 }
