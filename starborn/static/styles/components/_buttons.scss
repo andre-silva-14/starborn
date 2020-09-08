@@ -10,6 +10,7 @@
                 $lightShadow, 
                 0px 0px 10px 8px 
                 $lightShadow;
+    transition: color 400ms;
     &:hover{
         background: none;
         border: 1px $oceanBlue solid;
