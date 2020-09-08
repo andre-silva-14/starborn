@@ -10,12 +10,20 @@
                 $lightShadow, 
                 0px 0px 10px 8px 
                 $lightShadow;
+    &:hover{
+        background: none;
+        border: 1px $oceanBlue solid;
+        color: $oceanBlue;
+    }
 }
 
 .login-btn {
     @extend .link-btn;
     padding: 9px 33px;
     font-size: 15px;
+    &:hover{
+        padding: 8px 32px;
+    }
 }
 
 .signup-btn {
@@ -23,4 +31,7 @@
     margin-top: 8vh;
     padding: 27px 32px;
     font-size: 27px;
+    &:hover{
+        padding: 26px 31px;
+    }
 }
