@@ -2,12 +2,17 @@
 {% load static %}
 
 {% block body %}
-    <div class="container">
+    <div class="container noselect">
         <header>
             <nav>
                 <a class="logo" href="/">
                     <img src="{% static 'logo.png' %}" alt="Logo">
                 </a>
+                <form class="login-form">
+                    <input type="text">
+                    <input type="password">
+                    <input type="submit">
+                </form>
                 <a href="#" class="login-btn">Login</a>
             </nav>
         </header>

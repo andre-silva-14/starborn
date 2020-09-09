@@ -1,7 +1,6 @@
 .link-btn {
     display: inline-block;
     text-decoration: none;
-    user-select: none;
     color: $black;
     font-weight: 300;
     border-radius: 12px;
@@ -34,5 +33,11 @@
     font-size: 27px;
     &:hover{
         padding: 26px 31px;
+    }
+}
+
+@media only screen and (min-width: 1140px){
+    .login-btn {
+        display: none;
     }
 }

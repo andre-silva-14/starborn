@@ -18,6 +18,10 @@ $lightShadow: rgba(51, 69, 66, 0.25);
     z-index: -1;
 }
 
+.noselect {
+    user-select: none;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -27,11 +31,14 @@ nav{
 .logo{
     display: inline-block;
     text-decoration: none;
-    user-select: none;
     
     img{
         height: 115px;
     }
+}
+
+.login-form{
+    display: none;
 }
 
 .container {
@@ -41,6 +48,17 @@ nav{
 .inner-content{
     margin: 15vh 2%;
 }
+
+/* Desktop Styles */
+@media only screen and (min-width: 1140px){
+    .inner-content {
+        margin: 15vh 8%;
+    }
+    .login-form{
+        display: block;
+    }
+}
+
 
 @import "./components/buttons";
 @import "./components/text";
