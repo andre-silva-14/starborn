@@ -1,6 +1,4 @@
-.link-btn {
-    display: inline-block;
-    text-decoration: none;
+.btn {
     color: $black;
     font-weight: 300;
     border-radius: 12px;
@@ -10,6 +8,7 @@
                 0px 0px 10px 8px 
                 $lightShadow;
     transition: color 400ms;
+
     &:hover{
         background: none;
         border: 1px $oceanBlue solid;
@@ -17,7 +16,24 @@
     }
 }
 
+.link-btn {
+    display: inline-block;
+    text-decoration: none;
+    @extend .btn;
+}
+
 .login-btn {
+    @extend .btn;
+    padding: 9px 33px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        padding: 8px 32px;
+    }
+}
+
+.login-link-btn {
     @extend .link-btn;
     padding: 9px 33px;
     font-size: 15px;
@@ -37,7 +53,7 @@
 }
 
 @media only screen and (min-width: 1140px){
-    .login-btn {
+    .login-link-btn {
         display: none;
     }
 }

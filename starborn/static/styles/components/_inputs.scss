@@ -1,0 +1,26 @@
+.input {
+    background: none;
+    color: white;
+    border: 0.5px white solid;
+    border-radius: 12px;
+    &::placeholder {
+        color: white;
+        opacity: 0.55;
+    }
+    &:focus {
+        outline: none;
+        border-color: $oceanBlue;
+        box-shadow: 0px 0px 6px 2px
+                $lightShadow, 
+                0px 0px 6px 4px 
+                $lightShadow;
+    }
+}
+
+.login-input {
+    @extend .input;
+    font-size: 15px;
+    padding: 9px 18px;
+    width: 175px;
+    margin-right: 20px;
+}
