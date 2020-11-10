@@ -1,0 +1,22 @@
+.login-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 12vh;
+
+    h1 {
+        margin-bottom: 14px;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        input {
+            margin: 14px 0;
+        }
+    }
+}

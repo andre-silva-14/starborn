@@ -1,6 +1,22 @@
 {% extends "base.html" %}
-
+{% load static %}
 
 {% block body %}
-    <h1>Login</h1>
+    <div class="container noselect">
+        <header>
+            <nav>
+                <a class="logo" href="/">
+                    <img src="{% static 'logo.png' %}" alt="Logo">
+                </a>
+            </nav>
+        </header>
+        <div class="login-form-container">
+            <h1>Login</h1>
+            <form>
+                <input class="login-input" type="text" placeholder="Username">
+                <input class="login-input" type="password" placeholder="Password">
+                <input class="login-btn" type="submit" value="Login">
+            </form>
+        </div>
+    </div>
 {% endblock %}
