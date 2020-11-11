@@ -33,6 +33,15 @@
     }
 }
 
+.larger-login-btn {
+    @extend .login-btn;
+    padding: 12px 48px;
+    font-size: 17px;
+    &:hover{
+        padding: 11px 47px;
+    }
+}
+
 .login-link-btn {
     @extend .link-btn;
     padding: 9px 33px;
@@ -50,6 +59,10 @@
     &:hover{
         padding: 26px 31px;
     }
+}
+
+.larger-signup-btn {
+    @extend .larger-login-btn;
 }
 
 @media only screen and (min-width: 1140px){
