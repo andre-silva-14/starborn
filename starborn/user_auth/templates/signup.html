@@ -1,5 +1,24 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block body %}
-    <h1>Signup</h1>
+    <div class="container noselect">
+        <header>
+            <nav>
+                <a class="logo" href="/">
+                    <img src="{% static 'logo.png' %}" alt="Logo">
+                </a>
+            </nav>
+        </header>
+        <div class="signup-form-container">
+            <h1>Register an Account</h1>
+            <form>
+                <input class="larger-login-input" type="text" placeholder="Username">
+                <input class="larger-login-input" type="email" placeholder="E-mail">
+                <input class="larger-login-input" type="password" placeholder="Password">
+                <input class="larger-login-input" type="password" placeholder="Confirm Password">
+                <input class="larger-signup-btn" type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
 {% endblock %}

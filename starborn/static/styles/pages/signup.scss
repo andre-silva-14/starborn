@@ -1,0 +1,33 @@
+.signup-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 12vh;
+
+    h1 {
+        font-weight: 300;
+        margin-bottom: 14px;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        input {
+            margin: 14px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .signup-form-container{
+        padding-top: 0;
+
+        form input {
+            margin: 8px 0;
+        }
+    }
+}
