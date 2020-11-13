@@ -12,7 +12,7 @@
         </header>
         <div class="login-form-container">
             <h1>Login</h1>
-            <form action="/" method="post">
+            <form method="POST">
                 {% csrf_token %}
                 {{ form }}
                 <input class="larger-login-btn" type="submit" value="Login">

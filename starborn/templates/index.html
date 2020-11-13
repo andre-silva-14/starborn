@@ -9,7 +9,7 @@
                     <img src="{% static 'logo.png' %}" alt="Logo">
                 </a>
                 {% if not user.is_authenticated %}
-                    <form class="login-form" action="/" method="post">
+                    <form class="login-form" method="POST">
                         {% csrf_token %}
                         {{ form }}
                         <input class="login-btn" type="submit" value="Login">
