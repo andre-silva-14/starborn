@@ -1,6 +1,6 @@
-from django.views.generic import FormView, CreateView
+from django.views.generic import FormView, CreateView, View
 from .forms import LargerLoginForm, SignUpForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 
@@ -8,6 +8,14 @@ class Login(FormView):
     template_name = 'login.html'
     form_class = LargerLoginForm
     success_url = reverse_lazy('home')
+
+class Logout(View):
+    success_url = reverse_lazy('home')
+    
+    def get(self, request):
+        logout(request)
+
+        return HttpResponseRedirect(self.success_url)
 
 class SignUp(CreateView):
     template_name = 'signup.html'

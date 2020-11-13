@@ -8,18 +8,26 @@
                 <a class="logo" href="/">
                     <img src="{% static 'logo.png' %}" alt="Logo">
                 </a>
-                <form class="login-form" action="/" method="post">
-                    {% csrf_token %}
-                    {{ form }}
-                    <input class="login-btn" type="submit" value="Login">
-                </form>
-                <a href="/login" class="login-link-btn">Login</a>
+                {% if not user.is_authenticated %}
+                    <form class="login-form" action="/" method="post">
+                        {% csrf_token %}
+                        {{ form }}
+                        <input class="login-btn" type="submit" value="Login">
+                    </form>
+                    <a href="/login" id="mobile-link-login" class="login-link-btn">Login</a>
+                {% else %}
+                    <a href="/logout" class="login-link-btn">Logout</a>
+                {% endif %}
             </nav>
         </header>
         <div class="inner-content">
-            <h2 class="smaller-heading">Welcome to Star Born!</h2>
-            <h1 class="bigger-heading">Be The One in <br>One Milion.</h1>
-            <a href="/signup" class="signup-btn">Sign Up Now</a>
+            {% if not user.is_authenticated %}
+                <h2 class="smaller-heading">Welcome to Star Born!</h2>
+                <h1 class="bigger-heading">Be The One in <br>One Milion.</h1>
+                <a href="/signup" class="signup-btn">Sign Up Now</a>
+            {% else %}
+                <h1 class="bigger-heading">Welcome, {{user.username.capitalize}}!</h1>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
