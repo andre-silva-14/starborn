@@ -1,8 +1,8 @@
-from django.views.generic import FormView
+from django.contrib.auth.views import LoginView
 from user_auth.forms import LoginForm
 from django.urls import reverse_lazy
 
-class Homepage(FormView):
+class Homepage(LoginView):
     template_name = 'index.html'
-    form_class = LoginForm
+    authentication_form = LoginForm
     success_url = reverse_lazy('home')

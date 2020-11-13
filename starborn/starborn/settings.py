@@ -109,6 +109,8 @@ PASSWORD_HASHERS = [
 ]
 
 AUTH_USER_MODEL = 'user_auth.User'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 
 # Internationalization

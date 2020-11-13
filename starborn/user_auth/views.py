@@ -1,12 +1,13 @@
 from django.views.generic import FormView, CreateView, View
+from django.contrib.auth.views import LoginView
 from .forms import LargerLoginForm, SignUpForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 
-class Login(FormView):
+class Login(LoginView):
     template_name = 'login.html'
-    form_class = LargerLoginForm
+    authentication_form = LargerLoginForm
     success_url = reverse_lazy('home')
 
 class Logout(View):
