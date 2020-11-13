@@ -8,9 +8,9 @@
                 <a class="logo" href="/">
                     <img src="{% static 'logo.png' %}" alt="Logo">
                 </a>
-                <form class="login-form">
-                    <input class="login-input"type="text" placeholder="Username">
-                    <input class="login-input" type="password" placeholder="Password">
+                <form class="login-form" action="/" method="post">
+                    {% csrf_token %}
+                    {{ form }}
                     <input class="login-btn" type="submit" value="Login">
                 </form>
                 <a href="/login" class="login-link-btn">Login</a>
