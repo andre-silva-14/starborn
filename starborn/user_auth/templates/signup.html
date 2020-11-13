@@ -12,11 +12,9 @@
         </header>
         <div class="signup-form-container">
             <h1>Register an Account</h1>
-            <form>
-                <input class="larger-login-input" type="text" placeholder="Username">
-                <input class="larger-login-input" type="email" placeholder="E-mail">
-                <input class="larger-login-input" type="password" placeholder="Password">
-                <input class="larger-login-input" type="password" placeholder="Confirm Password">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form }}
                 <input class="larger-signup-btn" type="submit" value="Sign Up">
             </form>
         </div>
