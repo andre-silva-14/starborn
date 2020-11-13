@@ -12,9 +12,9 @@
         </header>
         <div class="login-form-container">
             <h1>Login</h1>
-            <form>
-                <input class="larger-login-input" type="text" placeholder="Username">
-                <input class="larger-login-input" type="password" placeholder="Password">
+            <form action="/" method="post">
+                {% csrf_token %}
+                {{ form }}
                 <input class="larger-login-btn" type="submit" value="Login">
             </form>
         </div>

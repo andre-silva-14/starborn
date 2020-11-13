@@ -1,8 +1,9 @@
-from django.views.generic import TemplateView
-from django.views.generic import CreateView
+from django.views.generic import FormView, TemplateView
+from .forms import LargerLoginForm
 
-class Login(TemplateView):
+class Login(FormView):
     template_name = 'login.html'
+    form_class = LargerLoginForm
 
 class SignUp(TemplateView):
     template_name = 'signup.html'
