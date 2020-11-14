@@ -4,6 +4,7 @@ from .forms import LargerLoginForm, SignUpForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
+from django.shortcuts import render
 
 class Login(LoginView):
     template_name = 'login.html'
@@ -32,4 +33,5 @@ class SignUp(CreateView):
 
         auth = authenticate(username=username, password=password)
         login(self.request, auth)
+        self.request.session['new_user'] = True
         return HttpResponseRedirect(self.success_url)

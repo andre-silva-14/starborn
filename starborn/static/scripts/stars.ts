@@ -12,6 +12,7 @@ interface Coordinates2D {
 
 const canvas = document.querySelector('#canvas') as HTMLCanvasElement;
 const birthPlatform = document.querySelector('body') as HTMLBodyElement;
+const pageContent = document.querySelector(".container") as HTMLElement;
 const context = canvas.getContext('2d') as CanvasRenderingContext2D;
 const [canvasWidth, canvasHeight] = getCanvas();
 const animationFrame = getAnimationFrame();
@@ -46,7 +47,21 @@ const usingColorTheme: ColorTheme = (randomColorTheme) ?
 
 //RunTime Variables
 let basicAnimation = true;
-let endAnimation = false;
+let endAnimation = {
+    currentState: false,
+    endAnimation() {
+        pageContent.style.visibility = "visible";
+    },
+    get state() {
+        return this.currentState;
+    },
+    set state(newState) {
+        this.currentState = newState;
+        if (newState === true) {
+            this.endAnimation();
+        }
+    }
+}
 
 
 function getCanvas() {
@@ -295,6 +310,7 @@ function animateBasic() {
 
 function animateBigBang() {
     basicAnimation = false;
+    pageContent.style.visibility = "hidden";
 
     context.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -344,7 +360,7 @@ function animateExplosion() {
         };
     };
 
-    if (ready === starsOrder.length) return endAnimation = true;
+    if (ready === starsOrder.length) return endAnimation.state = true;
 
     for (const star of starsOrder) {
         try {
@@ -353,7 +369,7 @@ function animateExplosion() {
                    validation and action. In this case, do nothing.*/};
     };
 
-    if (!endAnimation) animationFrame(animateExplosion);
+    if (!endAnimation.state) animationFrame(animateExplosion);
 };
 
 
