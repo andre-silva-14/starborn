@@ -12,7 +12,7 @@ interface Coordinates2D {
 
 const canvas = document.querySelector('#canvas') as HTMLCanvasElement;
 const birthPlatform = document.querySelector('body') as HTMLBodyElement;
-const pageContent = document.querySelector(".container") as HTMLElement;
+const pageContent = document.querySelector(".hide") as HTMLElement;
 const context = canvas.getContext('2d') as CanvasRenderingContext2D;
 const [canvasWidth, canvasHeight] = getCanvas();
 const animationFrame = getAnimationFrame();
@@ -310,7 +310,6 @@ function animateBasic() {
 
 function animateBigBang() {
     basicAnimation = false;
-    pageContent.style.visibility = "hidden";
 
     context.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -394,6 +393,9 @@ window.onload = () => {
     birthPlatform.style.overflow = "hidden";
     setCanvas(canvas, canvasWidth, canvasHeight);
     start();
+    if (pageContent) {
+        animateBigBang();
+    }
 };
 
 

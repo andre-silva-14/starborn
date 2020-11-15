@@ -21,6 +21,6 @@ To compile the necessary code, cd into the directory containing `manage.py`
 
 and compile the Typescript and Sass before running the server:
 
-    $ tsc --outDir ./static/scripts/dist static/scripts/stars.ts
+    $ tsc -t es6 --outDir ./static/scripts/dist static/scripts/stars.ts
     $ sass ./static/styles/styles.scss ./static/styles/dist/styles.css
     $ py manage.py runserver

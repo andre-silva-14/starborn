@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block body %}
-    <div class="container noselect">
+    <div class="container noselect {% if new_user %}hide{% endif %}">
         <header>
             <nav>
                 <a class="logo" href="/">
