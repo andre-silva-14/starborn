@@ -31,6 +31,7 @@ const pageContent = document.querySelector(".hide") as HTMLElement;
 const context = canvasElement.getContext('2d') as CanvasRenderingContext2D;
 const animationFrame = getAnimationFrame();
 const windowSize = getWindowSize();
+const deviceType = (windowSize.width > 550) ? 'Desktop' : 'Mobile';
 const canvas = {
     _Width: windowSize.width,
     _Height: windowSize.height,
@@ -323,7 +324,9 @@ class Star {
      * Set this.center to true if the star is in the center.
      */
     moveToCenter() {
-        this.velocity = starVelocity * 5.8;
+        this.velocity = (deviceType === 'Mobile')
+                                ? starVelocity * 2.9
+                                : starVelocity * 5.8;
         this.directionToCenter();
 
         const nextPoint: Coordinate2D = {
@@ -347,7 +350,9 @@ class Star {
      * Set this.hidden to true once the star is outside of the observable universe.
      */
     moveStraight() {
-        this.velocity = starVelocity * getRandomInt(7,70);
+        this.velocity = (deviceType === 'Mobile')
+                                ? starVelocity * getRandomInt(4,35)
+                                : starVelocity * getRandomInt(7,70);
         
         const nextPoint: Coordinate2D = {
             x: this.x + Math.cos(degToRad(this.direction)) * this.velocity,
@@ -607,7 +612,7 @@ function countCentered(array: Star[]): number {
  * @param  {Star[]} array The array of Stars.
  * @return  {number} The amount of stars outside of the observable universe.
  */
-function countHidden(array: Star[]) {
+function countHidden(array: Star[]): number {
     let ready = 0;
     for (const star of array) {
         if (star.hidden) {
