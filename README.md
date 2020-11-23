@@ -1,7 +1,6 @@
-# Star Born
-An Innovative authentication page built with Django.
+<img align="center" alt="StarBorn - An Educational platform to explore our solar system." title="StarBorn - An Educational platform to explore our solar system." src=".github/logo.png" />
 
-(In development...)
+<p align="center">An Educational platform to explore our solar system.</p>
 
 
 ## Getting started...
