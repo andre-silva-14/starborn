@@ -1,4 +1,6 @@
-<img align="center" alt="StarBorn - An Educational platform to explore our solar system." title="StarBorn - An Educational platform to explore our solar system." src=".github/logo.png" />
+<p align="center">
+    <img alt="StarBorn - An Educational platform to explore our solar system." title="StarBorn - An Educational platform to explore our solar system." src=".github/logo.png" />
+</p>
 
 <p align="center">An Educational platform to explore our solar system.</p>
 
