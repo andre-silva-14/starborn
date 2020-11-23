@@ -5,8 +5,7 @@ from .models import User
 
 
 class LoginForm(AuthenticationForm):
-    # password = forms.CharField(widget=forms.PasswordInput)
-
+    
     class Meta():
         fields = ('username', 'password')
         model = User
@@ -33,10 +32,9 @@ class LoginForm(AuthenticationForm):
 
 
 class LargerLoginForm(AuthenticationForm):
-    password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta():
-        fields = ('username',)
+        fields = ('username', 'password')
         model = User
 
     def __init__(self, *args, **kwargs):
