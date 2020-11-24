@@ -30,4 +30,9 @@
             {% endif %}
         </div>
     </div>
+
+    {% if new_user or not user.is_authenticated %} 
+        <canvas id="canvas"></canvas>
+        <script type="text/javascript" src="{% static 'scripts/dist/stars.js' %}"></script>
+    {% endif %}
 {% endblock %}

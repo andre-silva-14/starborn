@@ -75,6 +75,7 @@ const endAnimation = {
     currentState: false,
     endAnimation() {
         pageContent.style.visibility = "visible";
+        canvasElement.style.visibility = "hidden";
     },
     get state() {
         return this.currentState;
