@@ -70,20 +70,58 @@ nav{
     -webkit-box-shadow: 0px -3px 9px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    0px -3px 9px 0px rgba(50, 50, 50, 0.75);
     box-shadow:         0px -3px 9px 0px rgba(50, 50, 50, 0.75);
+
+    a {
+        padding: 15px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            height: 55px;
+            opacity: 0.6;
+            margin-bottom: 7px;
+        }
+
+        h6 {
+            opacity: 0.6;
+        }
+
+        &:hover >  {
+            img {
+                opacity: 1;
+            }
+            h6 {
+                opacity: 1;
+            }
+        }
+    }
+    
+    .active {
+        img {
+            opacity: 1;
+        }
+        h6 {
+            opacity: 1;
+        }
+    }
+
+    .saturn {
+        padding: 1px;
+    }    
 }
 
-.bottom-nav a{
-    padding: 15px;
+
+.main-picture img {
+    height: 80vh;
+    transform: translateY(-12vh);
 }
 
-.bottom-nav img{
-    opacity: 0.6;
+.auth-content {
+    display:flex;
+    justify-content: center;
 }
-
-.bottom-nav a:hover > img{
-    opacity: 1.2;
-}
-
 
 /* Desktop Styles */
 @media only screen and (min-width: 1140px){
