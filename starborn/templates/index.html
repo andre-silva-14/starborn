@@ -28,9 +28,58 @@
             </div>
         {% else %}
             <div class="auth-content">
-                <div class="main-picture">
-                    <img src="{% static 'images/sun.png' %}" alt="Sun Picture">
-                </div>
+                {% block main-view %}
+                    <div class="main-picture">
+                        <img src="{% static 'images/sun.png' %}" alt="Sun Picture">
+                    </div>
+                    <div class="stats-list">
+                        <div>
+                            <h5>Radius</h5>
+                            <div class="stat">
+                                <div class="stat-bar">
+                                    <div style="width: 26%;"></div>
+                                </div>
+                                <h4>696,342 km</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Age (years)</h5>
+                            <div class="stat">
+                                <div class="stat-bar">
+                                    <div style="width: 38%;"></div>
+                                </div>
+                                <h4>4.6 Million</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Orbital Velocity</h5>
+                            <div class="stat">
+                                <div class="stat-bar">
+                                    <div style="width: 48%;"></div>
+                                </div>
+                                <h4>220 km/s</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Temperature</h5>
+                            <div class="stat">
+                                <div class="stat-bar">
+                                    <div style="width: 32%;"></div>
+                                </div>
+                                <h4>5,778 K</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Inclination</h5>
+                            <div class="stat">
+                                <div class="stat-bar">
+                                    <div style="width: 78%;"></div>
+                                </div>
+                                <h4>51.67 º</h4>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
                 <nav class="bottom-nav">
                     <a href="/" class="active">
                         <img src="{% static 'images/sun-icon.png' %}" alt="Sun Icon">

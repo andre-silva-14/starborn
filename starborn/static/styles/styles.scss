@@ -123,6 +123,36 @@ nav{
     justify-content: center;
 }
 
+.stats-list {
+    position: absolute;
+    top: 18vh;
+    right: 200px;
+
+    div{
+        margin-bottom: 1.5vh;
+    }
+}
+
+.stat {
+    display: flex;
+}
+
+.stat-bar {
+    display: inline-block;
+    width: 100px;
+    height: 5px;
+    border-radius: 3px;
+    margin-top: 8px;
+    margin-right: 12px;
+    background-color: rgb(121, 121, 121);
+
+    div {
+        height: 100%;
+        border-radius: 6px;
+        background-color: rgb(33, 141, 118);
+    }
+}
+
 /* Desktop Styles */
 @media only screen and (min-width: 1140px){
     .inner-content {
