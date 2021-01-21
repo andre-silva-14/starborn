@@ -31,7 +31,7 @@
                 {% block main-view %}
                     <div class="main-picture">
                         {% if planet %}
-                            <img src="{% static planet_image %}" alt="{{planet.capitalize}} Picture">
+                            <img src="{% static planet_image %}" alt="{{planet.name.capitalize}} Picture">
                         {% else %}
                             <img src="{% static 'images/sun.png' %}" alt="Sun Picture">
                         {% endif %}
@@ -91,35 +91,35 @@
                         <img src="{% static 'images/sun-icon.png' %}" alt="Sun Icon">
                         <h6>Sun</h6>
                     </a>
-                    <a href="{% url 'planet_detail' 'mercury' %}" class="{% if planet == 'mercury'%}active{% endif %}">
+                    <a href="{% url 'planet_detail' 'mercury' %}" class="{% if planet.name == 'mercury'%}active{% endif %}">
                         <img src="{% static 'images/mercury-icon.png' %}" alt="Mercury Icon">
                         <h6>Mercury</h6>
                     </a>
-                    <a href="{% url 'planet_detail' 'venus' %}" class="{% if planet == 'venus'%}active{% endif %}">
+                    <a href="{% url 'planet_detail' 'venus' %}" class="{% if planet.name == 'venus'%}active{% endif %}">
                         <img src="{% static 'images/venus-icon.png' %}" alt="Venus Icon">
                         <h6>Venus</h6>
                     </a>
-                    <a href="{% url 'planet_detail' 'earth' %}" class="{% if planet == 'earth'%}active{% endif %}">
+                    <a href="{% url 'planet_detail' 'earth' %}" class="{% if planet.name == 'earth'%}active{% endif %}">
                         <img src="{% static 'images/earth-icon.png' %}" alt="Earth Icon">
                         <h6>Earth</h6>
                     </a>
-                    <a href="{% url 'planet_detail' 'mars' %}" class="{% if planet == 'mars'%}active{% endif %}">
+                    <a href="{% url 'planet_detail' 'mars' %}" class="{% if planet.name == 'mars'%}active{% endif %}">
                         <img src="{% static 'images/mars-icon.png' %}" alt="Mars Icon">
                         <h6>Mars</h6>
                     </a>
-                    <a href="{% url 'planet_detail' 'jupiter' %}" class="{% if planet == 'jupiter'%}active{% endif %}">
+                    <a href="{% url 'planet_detail' 'jupiter' %}" class="{% if planet.name == 'jupiter'%}active{% endif %}">
                         <img src="{% static 'images/jupiter-icon.png' %}" alt="Jupiter Icon">
                         <h6>Jupiter</h6>
                     </a>
-                    <a href="{% url 'planet_detail' 'saturn' %}" class="saturn {% if planet == 'saturn'%}active{% endif %}">
+                    <a href="{% url 'planet_detail' 'saturn' %}" class="saturn {% if planet.name == 'saturn'%}active{% endif %}">
                         <img src="{% static 'images/saturn-icon.png' %}" alt="Saturn Icon">
                         <h6>Saturn</h6>
                     </a>
-                    <a href="{% url 'planet_detail' 'uranus' %}" class="{% if planet == 'uranus'%}active{% endif %}">
+                    <a href="{% url 'planet_detail' 'uranus' %}" class="{% if planet.name == 'uranus'%}active{% endif %}">
                         <img src="{% static 'images/uranus-icon.png' %}" alt="Uranus Icon">
                         <h6>Uranus</h6>
                     </a>
-                    <a href="{% url 'planet_detail' 'neptune' %}" class="{% if planet == 'neptune'%}active{% endif %}">
+                    <a href="{% url 'planet_detail' 'neptune' %}" class="{% if planet.name == 'neptune'%}active{% endif %}">
                         <img src="{% static 'images/neptune-icon.png' %}" alt="Neptune Icon">
                         <h6>Neptune</h6>
                     </a>
