@@ -9,19 +9,15 @@
 
 #### Set up the Environment
 
-After cloning the repository, install the requirements and set up a `SECRET_KEY`:
+After cloning the repository, install the requirements and setup a `SECRET_KEY`:
 
     $ pip install -r requirements.txt
     $ export SECRET_KEY=**************************
 
-#### Compiling the code
+#### Running the Server
 
-To compile the necessary code, cd into the directory containing `manage.py`
+To run the server, cd into the directory containing `manage.py` and run build followed by runserver:
 
     $ cd starborn
-
-and compile the Typescript and Sass before running the server:
-
-    $ tsc -t es6 --outDir ./static/scripts/dist static/scripts/stars.ts
-    $ sass ./static/styles/styles.scss ./static/styles/dist/styles.css
+    $ py manage.py build
     $ py manage.py runserver
