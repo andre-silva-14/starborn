@@ -1,5 +1,5 @@
 ﻿asgiref==3.2.10
-Django==3.1.13
+Django==3.1.14
 pytz==2020.1
 sqlparse==0.3.1
 argon2-cffi==20.1.0
